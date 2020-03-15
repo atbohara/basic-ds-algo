@@ -9,7 +9,7 @@ def is_unique_bitwise(word):
     """
     checker = 0
     for ch in word:
-        val = ord(ch) - ord('a')
+        val = ord(ch) - ord('a') # Reverse of ord() is chr(), e.g., chr(ord('a') + 3) -> 'd'.
         if (checker & (1 << val)):
             return False
         checker |= (1 << val)

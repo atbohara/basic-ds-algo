@@ -1,5 +1,6 @@
-# Demonstration of different built-in sorting methods in Python.
-# Ref: https://docs.python.org/3.3/howto/sorting.html
+"""Demonstration of different built-in methods for sorting.
+Ref: https://docs.python.org/3.3/howto/sorting.html
+"""
 
 # Using list.sort() method.
 ls1 = [1, 3, 10, 2, 9]
