@@ -33,17 +33,19 @@ class LinkedList:
             last = last.next
         last.next = new_node
 
-    def size(self):
-        """Returns the number of nodes in the list.
-        Returns 0 for empty list.
+    def getLastandSize(self):
+        """Returns the last(tail) node and the size (number of nodes).
+        Returns (None, 0) for empty list.
         O(N).
         """
+        if not self.head:
+            return (None, 0)
+        size = 1
         node = self.head
-        size = 0
-        while node:
+        while node.next:
             size += 1
             node = node.next
-        return size
+        return (node, size)
 
     def search(self, data):
         """Returns the reference to the first Node having the desired value.
@@ -96,9 +98,8 @@ class LinkedList:
         """
         if not self.head:
             return None
-        count = 0
         node = self.head
-        while (node) and (count != index):
-            count += 1
+        while (index > 0) and (node):
             node = node.next
+            index -= 1
         return node
